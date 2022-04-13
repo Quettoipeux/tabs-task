@@ -1,0 +1,106 @@
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+
+  color: #eee;
+
+  font: 20px/1.4 sans-serif;
+
+  background: #282d36;
+}
+
+img {
+  position: relative;
+
+  display: block;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+
+  break-after: column;
+}
+
+a {
+  color: inherit;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+
+  color: #00adb5;
+  font-size: 1.5em;
+}
+
+p {
+  margin: 0.7em 0;
+
+  font-size: 0.9em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.tabs {
+  width: 1024px;
+  margin: 0 auto;
+  overflow-x: auto;
+
+  column-count: 3;
+  column-gap: 0;
+}
+
+.tab-name {
+  display: block;
+  padding: 1rem;
+
+  break-inside: avoid;
+
+  text-align: center;
+  text-decoration: none;
+
+  background-color: #00adb5;
+}
+
+.tabs-content {
+  column-span: all;
+
+  background-color: #393e46;
+}
+
+.tabs-content-item {
+  display: none;
+
+  padding: 20px;
+
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+a:hover,
+a:focus {
+  border-bottom: 3px solid #5ffbf1;
+}
+
+.tab-name[data-tab="html"]:hover ~ .tabs-content .tabs-content-item[data-tab-content="html"],
+.tab-name[data-tab="html"]:focus ~ .tabs-content .tabs-content-item[data-tab-content="html"],
+.tab-name[data-tab="css"]:hover ~ .tabs-content .tabs-content-item[data-tab-content="css"],
+.tab-name[data-tab="css"]:focus ~ .tabs-content .tabs-content-item[data-tab-content="css"],
+.tab-name[data-tab="js"]:hover ~ .tabs-content .tabs-content-item[data-tab-content="js"],
+.tab-name[data-tab="js"]:focus ~ .tabs-content .tabs-content-item[data-tab-content="js"] {
+  display: block;
+}
+
+.span-all {
+  column-span: all;
+}
