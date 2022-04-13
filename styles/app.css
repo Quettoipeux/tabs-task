@@ -24,11 +24,6 @@ img {
   break-after: column;
 }
 
-a {
-  color: inherit;
-  font-size: 1.2em;
-}
-
 h1 {
   font-size: 2em;
 }
@@ -64,6 +59,9 @@ p:last-child {
   display: block;
   padding: 1rem;
 
+  color: inherit;
+  font-size: 1.2em;
+
   break-inside: avoid;
 
   text-align: center;
@@ -87,9 +85,11 @@ p:last-child {
   column-gap: 1.5rem;
 }
 
-a:hover,
-a:focus {
+.tab-name:hover,
+.tab-name:focus {
   border-bottom: 3px solid #5ffbf1;
+
+  cursor: pointer;
 }
 
 .tab-name[data-tab="html"]:hover ~ .tabs-content .tabs-content-item[data-tab-content="html"],
